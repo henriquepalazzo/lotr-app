@@ -2,9 +2,14 @@ import Link from "next/link";
 import Head from "next/head";
 import { introduction } from "../../lib/data";
 import { volumes } from "../../lib/data";
-import { Fragment } from "react";
+import { useRouter } from "next/router";
 
 export default function Volumes() {
+  const router = useRouter();
+  function handleRandonGeneratorClick() {
+    const randonSlug = volumes[Math.floor(Math.random() * volumes.length)].slug;
+    router.push("Volumes/" + randonSlug);
+  }
   return (
     <>
       <Head>
@@ -24,6 +29,9 @@ export default function Volumes() {
             );
           })}
         </ul>
+        <button onClick={handleRandonGeneratorClick}>
+          Go to randon volume
+        </button>
       </section>
     </>
   );
