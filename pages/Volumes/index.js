@@ -1,25 +1,22 @@
 import Link from "next/link";
+import { introduction } from "../../lib/data";
+import { volumes } from "../../lib/data";
 
 export default function Volumes() {
   return (
     <section>
-      <h1>Volumes</h1>
+      <h1>The Lord of The Rings</h1>
+      <p>{introduction}</p>
+      <h2>All Volumes</h2>
       <ul>
-        <li>
-          <Link href="Volumes/the-fellowship-of-the-ring">
-            The fellowship of the ring
-          </Link>
-        </li>
-        <li>
-          <Link href="Volumes/the-two-towers">The Two Towers</Link>
-        </li>
-        <li>
-          <Link href="Volumes/the-return-of-the-king">
-            The return of the King
-          </Link>
-        </li>
+        {volumes.map((volume) => {
+          return (
+            <li key={volume.slug}>
+              <Link href={`Volumes/${volume.slug}`}>{volume.title}</Link>
+            </li>
+          );
+        })}
       </ul>
-      <Link href="/">back</Link>
     </section>
   );
 }
