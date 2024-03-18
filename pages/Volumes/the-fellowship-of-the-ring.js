@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { volumes } from "../../lib/data";
 import Nav from "@/components/Nav";
+import Head from "next/head";
 
 export default function TheFellowshipOfTheRing() {
   const volumeIndex = volumes.findIndex(
@@ -11,6 +12,10 @@ export default function TheFellowshipOfTheRing() {
 
   return (
     <>
+      <Head>
+        <title>Lord of the Rings - {volume.title}</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <article>
         <h1>{volume.title}</h1>
         <p>{volume.description}</p>
