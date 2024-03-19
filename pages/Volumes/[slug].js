@@ -1,6 +1,6 @@
 import { volumes } from "../../lib/data";
-import Nav from "@/components/Nav";
-import VolumeDetail from "@/components/VolumeDetail";
+import Nav from "@/components/Nav/Nav";
+import VolumeDetail from "@/components/VolumeDetail/VolumeDetail";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
