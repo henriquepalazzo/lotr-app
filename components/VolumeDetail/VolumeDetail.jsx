@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import "./VolumeDetail.module.css";
 
 export default function VolumeDetail({ volume }) {
   return (
