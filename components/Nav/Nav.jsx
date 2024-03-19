@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./Nav.module.css";
 
 export default function Nav({ currIndex, pages }) {
   return (
