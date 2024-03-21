@@ -10,6 +10,7 @@ export default function TheFellowshipOfTheRing() {
 
   const volumeIndex = volumes.findIndex((volume) => volume.slug === slug);
   const volume = volumes[volumeIndex];
+
   if (!volume) {
     return (
       <div>
@@ -17,6 +18,7 @@ export default function TheFellowshipOfTheRing() {
       </div>
     );
   }
+
   return (
     <>
       <Head>
